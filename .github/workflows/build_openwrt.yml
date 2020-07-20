@@ -33,10 +33,9 @@ jobs:
         run: |
           cd openwrt
           make -j$(nproc)
+          ls ./
       - name : Upload artifact
         uses: actions/upload-artifact@master
-        run: |
-          ls ./
         with:
           name: OpenWrt
           path: openwrt/bin
